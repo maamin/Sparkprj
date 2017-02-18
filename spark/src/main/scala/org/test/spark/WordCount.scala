@@ -25,6 +25,7 @@ object WordCount {
     .map { word =>
       (word,1) 
       }
+    
     .reduceByKey (_ + _)
     .saveAsTextFile("/tmp/"+args(0))     
    /* 
